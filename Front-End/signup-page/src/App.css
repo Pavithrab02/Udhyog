@@ -1,0 +1,707 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #041029;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #eef2f3;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.login-container {
+  background-image: url('https://th.bing.com/th/id/R.a0663bba2cc2654aac69407d2e0b5690?rik=14vFlxtgQrOAwg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fLight-blue-wallpaper-hd-quality.jpg&ehk=ebOgJiU5%2fkN6aJLjZLIhMYm0N%2fWHUm1mvjQnaXrR6NA%3d&risl=&pid=ImgRaw&r=0.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+/* login  */
+.login-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  background-color: #f7f8faf6;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: #f0f0f0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.job-posting-form {
+  max-width: 500px;
+  margin: 0 auto;
+ margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #0a0a44;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+}
+ 
+.form-group {
+  margin-bottom: 20px;
+}
+ 
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+ 
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #babbc0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+ 
+textarea {
+  height: 80px;
+}
+ 
+input[type="text"]:focus,
+textarea:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #14181c;
+}
+ 
+button {
+  padding: 12px 10px;
+  width: 190px;;
+  background-color: #0a0829;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+button:hover {
+  background-color: #2b0e6e;
+}
+.right-card-container {
+  position:absolute;
+  top: 50%; /* Center vertically */
+  right: 0; /* Align to the right side */
+  transform: translateY(-50%); /*Center vertically */
+}
+
+.left-card-container {
+  position:absolute;
+  top: 50%; /* Center vertically */
+  left:10;
+  right: 0; /* Align to the right side */
+  transform: translateY(-50%); /*Center vertically */
+}
+
+.custom-card {
+  width: 270px; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  margin: 20px; /* Adjust margin as needed */
+  margin-left: 300px;
+  margin-right: 250px;
+  border: none;
+  border-radius: 10px;
+  overflow: cover;
+  position:hidden ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+   
+ 
+/* .custom-card:hover .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Change overlay color on hover */
+
+
+/* .custom-card .card-title,
+.custom-card .card-text {
+  color: white; /* Set text color */
+  /* transition: opacity 0.5s ease; Add transition effect */
+ */
+
+.custom-card:hover .card-title,
+.custom-card:hover .card-text {
+  opacity: 0; /* Hide text on hover */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  color: rgb(238, 237, 241);
+  /* background-color: rgba(0, 0, 0, 0.5); Add a semi-transparent background to make text more readable */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-overlay h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.text-overlay p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text-overlay .typing-effect {
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* Adjust the color and thickness as needed */
+  white-space: nowrap;
+  margin: 0 auto; /* Center the text if needed */
+  animation: typing 1.5s steps(40,end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(160, 160, 161); /* Adjust the color to match the border color above */
+  }
+}
+
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.job-browse-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  padding: 50px; /* Add padding for spacing */
+}
+
+.text-container {
+  flex: 1; /* Take up remaining space */
+  margin-right: 20px; /* Add space between text and image */
+}
+
+.image-container1 {
+  flex: 1; /* Take up remaining space */
+  display: flex; /* Use flexbox for image alignment */
+  justify-content: flex-end; /* Align image to the right */
+}
+
+
+.image-container1 img {
+  max-width: 100%;
+  height: auto;
+  animation: dance 1s infinite alternate; /* Define the animation */
+  width: 50%;
+  height: 50%;
+  margin-right: 20%;
+}
+
+@keyframes dance {
+  from {
+    transform: translateY(0); /* Start position */
+  }
+  to {
+    transform: translateY(-20px); /* End position */
+  }
+}
+
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.how-it-works {
+  text-align: center;
+  background-color: #dfd9d9;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+  gap: 20px; /* Gap between sections */
+  
+}
+
+.section {
+  background-color: #dfd9d9; /* Background color */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#about-us-section {
+  text-align: center; /* Center-align the content */
+  background-color: #b6b4c7;
+}
+
+#aboutsection {
+  font-family: 'Arial', sans-serif; /* Choose a readable font */
+  font-size: 18px; /* Adjust font size as needed */
+  line-height: 1.6; /* Set line height for better readability */
+  color: #333; /* Set text color */
+  margin-top: 2%;
+}
+
+/* about */
+
+.about-us-button {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #93959c;
+  background-color: #93959c;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  border-radius: 5px;
+}
+
+.about-us-button:hover {
+  background-color: #fff;
+  color: #93959c;
+}
+
+.footer {
+  background-color: #333;
+  color: #751919;
+  padding: 50px 0;
+}
+
+.footer h4 {
+  color: #fff;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+.bottom-footer {
+  background-color: #222;
+  padding: 20px 0;
+}
+
+.bottom-footer p {
+  color: #f3e3e3;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.icon {
+  color: #fff; /* Set icon color */
+  font-size: 24px; /* Adjust icon size */
+}
+
+.marquee {
+  scrollamount: 20;
+  direction: right;
+  padding: 10px;
+}
+.candidate-details-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-details-title {
+  margin-bottom: 20px;
+}
+
+.candidate-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-details-item {
+  margin-bottom: 10px;
+}
+
+.candidate-image-container {
+  margin-top: 20px;
+}
+
+.candidate-image-title {
+  margin-bottom: 10px;
+}
+
+.candidate-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* footer */
+.container {
+  max-width: 800px; /* Adjust width as needed */
+  margin: auto;
+  padding: 20px;
+  background-color: #3b3737;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Add box shadow */
+} 
+
+.container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: rgb(68, 18, 249);
+}
+
+.img-thumbnail {
+  width: 20%;
+  height: 20%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.avatar-container {
+  width: 150px;
+  height: 150px;
+  overflow-wrap: normal;
+  border-radius: 50%; /* To make it circular */
+  position: absolute;
+  top: 50px; /* Adjust top position as needed */
+  left: 50%; /* Move to the middle horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+}
+
+
+.avatar {
+  width: 100%;
+  height: auto;
+  box-shadow: #282c34;
+  border-radius: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.avatar-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+.image-input {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.profile-image.rounded-circle {
+  width: 20%; /* Adjust size as needed */
+  height: 30%; /* Adjust size as needed */
+  border-radius: 50%; /* Make it a circle */
+}
+
+.card {
+  width: 300px; /* Adjust the width as needed */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+}
+.btn-resume{
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-container button {
+  margin-right: 5px;
+ 
+}
+
+/* scrollup button styles */
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #868889;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+}
+ 
+.scroll-to-top-button.visible {
+  display: flex; /* Show the button when visible */
+}
+ 
+/* Style the arrow icon */
+.scroll-to-top-button i {
+  font-size: 1.5rem;
+}
+

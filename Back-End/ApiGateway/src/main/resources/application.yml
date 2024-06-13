@@ -1,0 +1,125 @@
+server:
+  port: 8001
+  
+spring :
+  application:
+    name: ApiGateway
+  main:
+    web-application-type: reactive
+    
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods: "GET,POST,PUT,DELETE"
+            allowedHeaders: "*"
+            allowCredentials: true
+        
+      routes[0]:        
+        id: EmployerRegistration
+        uri: http://localhost:9001/api/v1/users/register/**
+        predicates[0]: Path=/api/v1/users/register/**
+        
+      routes[1]:        
+        id: EmployerRegistration
+        uri: http://localhost:9001/api/v1/users/login/**
+        predicates[0]: Path=/api/v1/users/login/**
+        
+      routes[2]:        
+        id: JobSeekerRegistration
+        uri: http://localhost:9004/udhyog/users/candregister/**
+        predicates[0]: Path=/udhyog/users/candregister/**
+      
+      routes[3]:        
+        id: JobSeekerRegistration
+        uri: http://localhost:9004/udhyog/users/candlogin/**
+        predicates[0]: Path=/udhyog/users/candlogin/**
+        
+      routes[4]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/jobposting
+        predicates[0]: Path=/api/jobposting
+        
+      routes[5]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/jobpostings/**
+        predicates[0]: Path=/api/jobpostings/**
+        
+      routes[6]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/deletejob/{jobId}/**
+        predicates[0]: Path=/api/deletejob/{jobId}/**
+        
+      routes[7]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/getjobs/{companyId}/**
+        predicates[0]: Path=/api/getjobs/{companyId}/**
+        
+      routes[8]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/job/{jobId}/**
+        predicates[0]: Path=/api/job/{jobId}/**
+        
+        
+      routes[9]:        
+        id: JobPosting
+        uri: http://localhost:9002/api/updatejob/{jobId}/**
+        predicates[0]: Path=/api/updatejob/{jobId}/**
+        
+      routes[10]:        
+        id: jobApplication
+        uri: http://localhost:9000/udhyog/applications/**
+        predicates[0]: Path=/udhyog/applications/**
+        
+      routes[11]:        
+        id: jobApplication
+        uri: http://localhost:9000/udhyog/getJobApplications/**
+        predicates[0]: Path=/udhyog/getJobApplications/**
+        
+      routes[12]:        
+        id: jobApplication
+        uri: http://localhost:9000/udhyog/applications/company/{companyId}/**
+        predicates[0]: Path=/udhyog/applications/company//{companyId}/**
+        
+      routes[13]:        
+        id: jobApplication
+        uri: http://localhost:9000/udhyog/applications/cand/{candidateId}/**
+        predicates[0]: Path=/udhyog/applications/cand/{candidateId}/**
+        
+      routes[14]:        
+        id: jobApplication
+        uri: http://localhost:9000/udhyog/{id}/status/**
+        predicates[0]: Path=/udhyog/{id}/status/**
+        
+      routes[15]:        
+        id: Candidate-Profile
+        uri: http://localhost:9003/candidates/candidates/**
+        predicates[0]: Path=/candidates/candidates/**
+        
+      routes[16]:               
+        id: Candidate-Profile
+        uri: http://localhost:9003/candidates/candidate/{email}/**
+        predicates[0]: Path=/candidates/candidate/{email}/**
+        
+      routes[17]:        
+        id: Candidate-Profile
+        uri: http://localhost:9003/candidates/candidates/update/**
+        predicates[0]: Path=/candidates/candidates/update/**
+        
+      discovery:
+        locator:
+          enabled: true
+          
+          
+        lower-case-service-id: true    
+        
+        
+        
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka  

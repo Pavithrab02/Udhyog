@@ -1,0 +1,20 @@
+.search-input {
+    padding: 10px 12px; /* Adjust padding for a smaller search bar */
+    font-size: 14px; /* Adjust font size for smaller text */
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    margin-top:20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0 auto; /* Center the search bar horizontally */
+    width: 300px; /* Set a smaller width for the search bar */
+  }
+  .job-card-row {
+    margin-left: -15px; /* Adjust margin to align with container */
+    margin-right: -15px; /* Adjust margin to align with container */
+  }
+ 
+  .job-card-col {
+    padding-left: 15px; /* Add padding left for spacing */
+    padding-right: 15px; /* Add padding right for spacing */
+  }
